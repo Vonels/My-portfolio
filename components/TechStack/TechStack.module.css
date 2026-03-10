@@ -1,0 +1,73 @@
+.tech {
+  width: 100%;
+  padding: 30px 40px;
+}
+
+.techContainer {
+  width: 100%;
+  padding: 0 80px; /* только внутренние отступы */
+}
+
+.title {
+  font-size: 18px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.list {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  gap: 10px;
+  padding: 14px 20px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.next {
+  color: #ffffff;
+}
+
+.react {
+  color: #61dafb;
+}
+
+.ts {
+  color: #3178c6;
+}
+
+.node {
+  color: #3c873a;
+}
+
+.mongo {
+  color: #47a248;
+}
+
+.tailwind {
+  color: #38bdf8;
+}
+
+.git {
+  color: #f1502f;
+}

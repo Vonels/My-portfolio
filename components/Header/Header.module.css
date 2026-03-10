@@ -1,0 +1,32 @@
+.nav {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navfull {
+  display: flex;
+  position: absolute;
+  left: 40%;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navelement {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s;
+  &:hover {
+    color: blueviolet;
+  }
+}
