@@ -1,6 +1,25 @@
 import css from "./About.module.css";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiNodedotjs,
+  SiMongodb,
+  SiTailwindcss,
+  SiGit,
+} from "react-icons/si";
 
 export default function About() {
+  const stack = [
+    { name: "Next.js", icon: <SiNextdotjs />, class: "next" },
+    { name: "React", icon: <SiReact />, class: "react" },
+    { name: "TypeScript", icon: <SiTypescript />, class: "ts" },
+    { name: "Node.js", icon: <SiNodedotjs />, class: "node" },
+    { name: "MongoDB", icon: <SiMongodb />, class: "mongo" },
+    { name: "Tailwind", icon: <SiTailwindcss />, class: "tailwind" },
+    { name: "Git", icon: <SiGit />, class: "git" },
+  ];
+
   return (
     <section className={css.about}>
       <div className={css.container}>
@@ -20,13 +39,15 @@ export default function About() {
 
           <h2 className={css.subtitle}>Tech Stack</h2>
 
-          <div className={css.skills}>
-            <span>React</span>
-            <span>Next.js</span>
-            <span>TypeScript</span>
-            <span>Node.js</span>
-            <span>MongoDB</span>
-            <span>Git</span>
+          <div className={css.list}>
+            {stack.map((tech) => (
+              <div key={tech.name} className={css.card}>
+                <span className={`${css.icon} ${css[tech.class]}`}>
+                  {tech.icon}
+                </span>
+                {tech.name}
+              </div>
+            ))}
           </div>
 
           <h2 className={css.subtitle}>Education</h2>
@@ -38,6 +59,16 @@ export default function About() {
             <p>
               <b>2017 – 2021</b> Sumy National Agrarian University
             </p>
+          </div>
+          <div className={css.section}>
+            <h2 className={css.sectionTitle}>Soft Skills</h2>
+
+            <div className={css.skills}>
+              <span>Problem solving</span>
+              <span>Team communication</span>
+              <span>Fast learner</span>
+              <span>Responsibility</span>
+            </div>
           </div>
         </div>
       </div>
@@ -66,19 +97,6 @@ export default function About() {
             <h3>Expense Tracker</h3>
             <p>Finance management app built with Next.js and TypeScript.</p>
           </div>
-        </div>
-      </div>
-
-      {/* SOFT SKILLS */}
-
-      <div className={css.section}>
-        <h2 className={css.sectionTitle}>Soft Skills</h2>
-
-        <div className={css.skills}>
-          <span>Problem solving</span>
-          <span>Team communication</span>
-          <span>Fast learner</span>
-          <span>Responsibility</span>
         </div>
       </div>
 

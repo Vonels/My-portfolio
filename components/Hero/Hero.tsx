@@ -1,5 +1,6 @@
 import Image from "next/image";
 import css from "../Hero/Hero.module.css";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,7 +25,11 @@ export default function Hero() {
 
           <div className={css.morebutton}>
             <button className={css.btnproject}>View Project</button>
-            <button className={css.btngit}>GitHub</button>
+            <button className={css.btngit}>
+              <Link href="https://github.com/Vonels" className={css.linkbtn}>
+                GitHub
+              </Link>
+            </button>
           </div>
         </div>
       </div>

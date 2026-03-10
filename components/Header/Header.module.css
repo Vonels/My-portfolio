@@ -20,6 +20,7 @@
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
+  color: white;
 }
 
 .navelement {
@@ -27,6 +28,8 @@
   font-weight: 700;
   cursor: pointer;
   transition: 0.4s;
+  text-decoration: none;
+  color: white;
   &:hover {
     color: blueviolet;
   }
