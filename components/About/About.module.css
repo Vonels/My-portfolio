@@ -1,7 +1,9 @@
 .about {
   max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 20px;
+  margin-left: 200px;
+  margin-right: auto;
+  padding-top: 30px;
+  min-height: 100vh;
 }
 
 .container {
@@ -55,11 +57,11 @@
 }
 
 .education p {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .section {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .sectionTitle {
@@ -92,8 +94,13 @@
 }
 
 .cta {
-  margin-top: 60px;
+  margin-top: 40px;
+  margin-left: 300px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button {
@@ -142,6 +149,14 @@
 
 .git {
   color: #f1502f;
+}
+
+.js {
+  color: #f7df1e;
+}
+
+.html {
+  color: #e34c26;
 }
 
 .card {

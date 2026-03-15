@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   position: relative;
+  z-index: 1000;
   align-items: center;
   padding: 20px 50px;
   background: rgba(2, 6, 23, 0.8);
@@ -33,4 +34,64 @@
   &:hover {
     color: blueviolet;
   }
+}
+
+.righticons {
+  position: absolute;
+  right: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon {
+  font-size: 22px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  color: blueviolet;
+}
+
+/* POPUP */
+
+.popup {
+  position: absolute;
+  top: 40px;
+  right: 0;
+
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.popup a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: white;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.popup a:hover {
+  color: blueviolet;
 }

@@ -5,8 +5,8 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiMongodb,
-  SiTailwindcss,
-  SiGit,
+  SiJavascript,
+  SiHtml5,
 } from "react-icons/si";
 
 export default function About() {
@@ -16,8 +16,8 @@ export default function About() {
     { name: "TypeScript", icon: <SiTypescript />, class: "ts" },
     { name: "Node.js", icon: <SiNodedotjs />, class: "node" },
     { name: "MongoDB", icon: <SiMongodb />, class: "mongo" },
-    { name: "Tailwind", icon: <SiTailwindcss />, class: "tailwind" },
-    { name: "Git", icon: <SiGit />, class: "git" },
+    { name: "JavaScript", icon: <SiJavascript />, class: "js" },
+    { name: "HTML5", icon: <SiHtml5 />, class: "html" },
   ];
 
   return (

@@ -1,4 +1,5 @@
 import css from "./TechStack.module.css";
+import { SiJavascript, SiHtml5 } from "react-icons/si";
 
 import {
   SiNextdotjs,
@@ -17,8 +18,8 @@ export default function TechStack() {
     { name: "TypeScript", icon: <SiTypescript />, class: "ts" },
     { name: "Node.js", icon: <SiNodedotjs />, class: "node" },
     { name: "MongoDB", icon: <SiMongodb />, class: "mongo" },
-    { name: "Tailwind", icon: <SiTailwindcss />, class: "tailwind" },
-    { name: "Git", icon: <SiGit />, class: "git" },
+    { name: "JavaScript", icon: <SiJavascript />, class: "js" },
+    { name: "HTML5", icon: <SiHtml5 />, class: "html" },
   ];
 
   return (
