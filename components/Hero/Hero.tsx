@@ -1,17 +1,22 @@
-import Image from "next/image";
 import css from "../Hero/Hero.module.css";
 import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className={css.hero}>
+      <video className={css.videoBg} autoPlay muted loop playsInline>
+        <source src="/viduvidu.mp4" type="video/mp4" />
+      </video>
+
       <div className={css.container}>
         <div className={css.blockleft}>
           <h1 className={css.title}>
             Hi, Im <br />
             Vlad <span>Nesterenko</span>
           </h1>
+
           <h2 className={css.doptitle}>Fullstack Developer</h2>
+
           <p className={css.description}>
             I build modern web applications using
           </p>
@@ -29,6 +34,7 @@ export default function Hero() {
             <Link href="/project">
               <button className={css.btnproject}>View Project</button>
             </Link>
+
             <Link
               href="https://github.com/Vonels"
               target="_blank"
