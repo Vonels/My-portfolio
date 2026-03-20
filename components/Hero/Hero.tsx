@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className={css.hero}>
       <video className={css.videoBg} autoPlay muted loop playsInline>
-        <source src="/viduvidu.mp4" type="video/mp4" />
+        <source src="/didu.mp4" type="video/mp4" />
       </video>
 
       <div className={css.container}>
