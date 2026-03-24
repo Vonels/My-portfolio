@@ -25,17 +25,19 @@ export default function TechStack() {
   return (
     <section className={css.tech}>
       <div className={css.techcontainer}>
-        <h3 className={css.title}>Tech Stack</h3>
+        <h3 className={css.title}>TECH STACK</h3>
 
-        <div className={css.list}>
-          {stack.map((tech) => (
-            <div key={tech.name} className={css.card}>
-              <span className={`${css.icon} ${css[tech.class]}`}>
-                {tech.icon}
-              </span>
-              {tech.name}
-            </div>
-          ))}
+        <div className={css.wrapper}>
+          <div className={css.list}>
+            {[...stack, ...stack].map((tech, i) => (
+              <div key={i} className={css.card}>
+                <span className={`${css.icon} ${css[tech.class]}`}>
+                  {tech.icon}
+                </span>
+                {tech.name}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -4,15 +4,24 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className={css.hero}>
-      <video className={css.videoBg} autoPlay muted loop playsInline>
+      <video
+        className={css.videoBg}
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls={false}
+        disablePictureInPicture
+        controlsList="nodownload nofullscreen noremoteplayback"
+      >
         <source src="/didu.mp4" type="video/mp4" />
       </video>
 
-      <div className={css.container}>
+      <div className={css.dom}>
         <div className={css.blockleft}>
           <h1 className={css.title}>
-            Hi, Im <br />
-            Vlad <span>Nesterenko</span>
+            Hi, I’m <br />
+            <span className={css.name}>Vlad Nesterenko</span>
           </h1>
 
           <h2 className={css.doptitle}>Fullstack Developer</h2>

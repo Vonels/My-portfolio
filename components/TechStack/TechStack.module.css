@@ -1,81 +1,175 @@
 .tech {
-  width: 100%;
-  padding: 10px 40px;
+  position: relative;
+  margin-top: -120px; /* 👈 поднимаем вверх */
+  z-index: 5;
 }
 
-.techContainer {
+.techcontainer {
   width: 100%;
-  padding: 0 80px; /* только внутренние отступы */
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .title {
-  font-size: 18px;
-  color: #9ca3af;
   margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
+/* 📱 MOBILE (база — горизонтальный скролл) */
 .list {
   display: flex;
-  gap: 16px;
-  width: 100%;
+  gap: 12px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  padding-bottom: 10px;
+}
+
+/* скрыть скролл */
+.list::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
-  flex: 1;
+  flex: 0 0 auto; /* 👈 важно */
+  scroll-snap-align: start;
+
+  padding: 10px 14px;
+  border-radius: 10px;
+
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  gap: 10px;
-  padding: 14px 20px;
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  color: white;
-  transition: all 0.2s ease;
-}
+  gap: 8px;
 
-.card:hover {
-  border-color: rgba(99, 102, 241, 0.4);
-  transform: translateY(-2px);
+  white-space: nowrap;
 }
 
 .icon {
-  font-size: 30px;
+  font-size: 18px;
 }
 
+/* цвета */
 .next {
-  color: #ffffff;
+  color: white;
 }
-
 .react {
-  color: #61dafb;
+  color: #3b82f6;
 }
-
 .ts {
   color: #3178c6;
 }
-
 .node {
-  color: #3c873a;
+  color: #22c55e;
 }
-
 .mongo {
-  color: #47a248;
+  color: #4ade80;
 }
-
-.tailwind {
-  color: #38bdf8;
-}
-
-.git {
-  color: #f1502f;
-}
-
 .js {
   color: #f7df1e;
 }
-
 .html {
   color: #e34c26;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+/* плавный fade по краям (очень красиво) */
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  z-index: 2;
+}
+
+.wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #000, transparent);
+}
+
+.wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #000, transparent);
+}
+
+/* список */
+.list {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+
+  animation: scroll 25s linear infinite;
+}
+
+/* стоп при наведении */
+.wrapper:hover .list {
+  animation-play-state: paused;
+}
+
+/* анимация */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 📱 TABLET */
+@media (min-width: 768px) {
+  .list {
+    gap: 14px;
+  }
+
+  .card {
+    padding: 10px 16px;
+    border-radius: 12px;
+
+    font-size: 15px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+}
+
+/* 💻 DESKTOP */
+@media (min-width: 1024px) {
+  .list {
+    gap: 24px;
+    justify-content: center; /* 👈 центрируем */
+  }
+
+  .card {
+    padding: 16px 28px;
+    border-radius: 16px;
+
+    font-size: 18px;
+
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition: all 0.3s ease;
+  }
+
+  .icon {
+    font-size: 26px;
+  }
 }
