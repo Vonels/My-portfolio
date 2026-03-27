@@ -97,7 +97,7 @@
 
 /* icons */
 .right {
-  flex: 1; /* 👈 важно */
+  flex: 1;
 
   display: flex;
   justify-content: flex-end;
@@ -161,7 +161,6 @@
 
     flex-direction: row;
     gap: 30px;
-
     flex: 1; /* 👈 ключ */
     justify-content: center;
 
@@ -182,5 +181,12 @@
 @media (min-width: 1024px) {
   .dom {
     padding: 20px 50px;
+  }
+
+  .link {
+    font-size: 25px;
+  }
+  .icon {
+    font-size: 30px;
   }
 }

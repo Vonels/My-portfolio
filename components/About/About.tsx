@@ -37,7 +37,9 @@ export default function About() {
             development skills.
           </p>
 
-          <h2 className={css.subtitle}>Tech Stack</h2>
+          <div className={css.section}>
+            <h2 className={css.subtitle}>Tech Stack</h2>
+          </div>
 
           <div className={css.list}>
             {stack.map((tech) => (
@@ -50,7 +52,9 @@ export default function About() {
             ))}
           </div>
 
-          <h2 className={css.subtitle}>Education</h2>
+          <div className={css.section}>
+            <h2 className={css.subtitle}>Education</h2>
+          </div>
 
           <div className={css.education}>
             <p>
@@ -103,8 +107,11 @@ export default function About() {
       {/* CTA */}
 
       <div className={css.cta}>
-        <h2>Lets work together</h2>
-        <p>If you are looking for a developer, feel free to contact me.</p>
+        <p className={css.ctaTitle}>Let’s work together</p>
+
+        <p className={css.ctaText}>
+          If you are looking for a developer, feel free to contact me.
+        </p>
 
         <button className={css.button}>Contact Me</button>
       </div>

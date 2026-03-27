@@ -19,28 +19,49 @@ export default function Header() {
 
         {/* NAV MENU */}
         <div className={`${css.navfull} ${menuOpen ? css.navOpen : ""}`}>
-          <Link href="/project" className={css.link}>
+          <Link
+            href="/project"
+            className={css.link}
+            onClick={() => setMenuOpen(false)}
+          >
             Project
           </Link>
 
-          <Link href="/about" className={css.link}>
+          <Link
+            href="/about"
+            className={css.link}
+            onClick={() => setMenuOpen(false)}
+          >
             About
           </Link>
 
-          <span className={css.link}>Contact</span>
+          <span
+            className={css.link}
+            onClick={() => {
+              setContactOpen(true);
+              setMenuOpen(false);
+            }}
+          >
+            Contact
+          </span>
         </div>
 
         {/* CONTACT MENU (НОВОЕ) */}
         <div
           className={`${css.contactMenu} ${contactOpen ? css.contactOpen : ""}`}
         >
-          <a href="tel:+380950135917" className={css.link}>
-            <FaPhone /> +380950135917
-          </a>
+          <Link
+            href="tel:+380950135917"
+            className={css.link}
+            onClick={() => setContactOpen(false)}
+          ></Link>
 
-          <a href="https://t.me/Vladka_56" target="_blank" className={css.link}>
-            <FaTelegram /> Vladka_56
-          </a>
+          <Link
+            href="https://t.me/Vladka_56"
+            target="_blank"
+            className={css.link}
+            onClick={() => setContactOpen(false)}
+          ></Link>
         </div>
 
         {/* RIGHT SIDE */}

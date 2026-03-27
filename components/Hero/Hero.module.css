@@ -164,7 +164,7 @@
   }
 
   .dom {
-    padding: 80px 40px 0;
+    padding: 80px 20px 0;
   }
 
   .title {
@@ -211,11 +211,18 @@
   .doptitle {
     font-size: 26px;
   }
+  .dom {
+    padding: 80px 40px 0;
+  }
 }
 
 /* 🖥 LARGE SCREENS */
 @media (min-width: 1440px) {
   .title {
-    font-size: 64px;
+    font-size: 72px;
+  }
+  .btngit {
+    padding: 12px 30px;
+    font-size: 14px;
   }
 }
